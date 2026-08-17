@@ -16,3 +16,6 @@
 
 - [x] Corrigir os botões “Quero fazer parte” para apontarem à seção de candidatura.
 - [x] Validar a navegação dos botões em desktop e mobile e salvar um novo checkpoint.
+
+- [x] Corrigir o destino dos botões “QUERO FAZER PARTE” para a seção “INICIE SUA CANDIDATURA”.
+- [x] Validar o scroll automático real até o formulário em desktop e mobile e salvar um novo checkpoint.

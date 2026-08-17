@@ -43,20 +43,23 @@ export default function Home() {
       cleanups.push(() => input.removeEventListener("input", onInput));
     }
 
-    const ctaLinks = Array.from(
-      document.querySelectorAll<HTMLAnchorElement>('a[href="#representada"]'),
-    );
     const onCtaClick = (event: MouseEvent) => {
-      event.preventDefault();
+      const link = (event.target as HTMLElement | null)?.closest<HTMLAnchorElement>(
+        'a[href="#representada"]',
+      );
+      if (!link) return;
+
       const target = document.getElementById("representada");
       if (!target) return;
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
+
+      event.preventDefault();
+      event.stopPropagation();
+      const targetTop = target.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: Math.max(0, targetTop - 16), behavior: "smooth" });
       window.history.replaceState(null, "", "#representada");
     };
-    ctaLinks.forEach((link) => link.addEventListener("click", onCtaClick));
-    cleanups.push(() =>
-      ctaLinks.forEach((link) => link.removeEventListener("click", onCtaClick)),
-    );
+    document.addEventListener("click", onCtaClick, true);
+    cleanups.push(() => document.removeEventListener("click", onCtaClick, true));
 
     const form = document.querySelector<HTMLFormElement>(
       'form[data-ajax="formsubmit"], form.contact-form',
