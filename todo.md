@@ -10,3 +10,6 @@
 
 - [x] Centralizar horizontalmente as fotos dos cards da seção “Responsáveis”.
 - [x] Validar o alinhamento em desktop e mobile e salvar um novo checkpoint.
+
+- [x] Animar continuamente o aviso “A Allure é feita para criadoras maiores de 18 anos” com leve pulso em velocidade média.
+- [x] Validar a legibilidade do aviso e o comportamento com prefers-reduced-motion.

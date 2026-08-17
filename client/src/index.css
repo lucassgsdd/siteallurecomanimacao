@@ -121,3 +121,27 @@
   display: flex;
   justify-content: center;
 }
+
+
+/* Alerta de idade: pulso contínuo, discreto e legível em velocidade média. */
+@keyframes allure-age-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.hero-side-note.age-notice-glow {
+  animation: allure-age-pulse 2.8s ease-in-out infinite !important;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-side-note.age-notice-glow {
+    animation: none !important;
+    transform: none;
+  }
+}
