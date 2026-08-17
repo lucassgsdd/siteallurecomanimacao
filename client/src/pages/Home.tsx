@@ -43,6 +43,21 @@ export default function Home() {
       cleanups.push(() => input.removeEventListener("input", onInput));
     }
 
+    const ctaLinks = Array.from(
+      document.querySelectorAll<HTMLAnchorElement>('a[href="#representada"]'),
+    );
+    const onCtaClick = (event: MouseEvent) => {
+      event.preventDefault();
+      const target = document.getElementById("representada");
+      if (!target) return;
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      window.history.replaceState(null, "", "#representada");
+    };
+    ctaLinks.forEach((link) => link.addEventListener("click", onCtaClick));
+    cleanups.push(() =>
+      ctaLinks.forEach((link) => link.removeEventListener("click", onCtaClick)),
+    );
+
     const form = document.querySelector<HTMLFormElement>(
       'form[data-ajax="formsubmit"], form.contact-form',
     );

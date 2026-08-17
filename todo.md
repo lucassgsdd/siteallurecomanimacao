@@ -13,3 +13,6 @@
 
 - [x] Animar continuamente o aviso “A Allure é feita para criadoras maiores de 18 anos” com leve pulso em velocidade média.
 - [x] Validar a legibilidade do aviso e o comportamento com prefers-reduced-motion.
+
+- [x] Corrigir os botões “Quero fazer parte” para apontarem à seção de candidatura.
+- [x] Validar a navegação dos botões em desktop e mobile e salvar um novo checkpoint.
