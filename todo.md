@@ -7,3 +7,6 @@
 - [x] Executar o projeto no preview do Manus e corrigir erros de inicialização.
 - [x] Validar a página principal em desktop e mobile.
 - [ ] Criar um checkpoint final antes da entrega. A build concluiu com sucesso; permanecem apenas avisos de caminhos de assets legados que são resolvidos em runtime.
+
+- [x] Centralizar horizontalmente as fotos dos cards da seção “Responsáveis”.
+- [x] Validar o alinhamento em desktop e mobile e salvar um novo checkpoint.

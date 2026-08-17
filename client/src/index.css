@@ -104,3 +104,20 @@
 
 /* Allure Agency — aviso 18+ estático, preparado para o ScrollReveal isolado. */
 .hero-side-note.age-notice-glow{color:#fff8dd!important;opacity:1!important;font-size:.64rem;font-weight:700;letter-spacing:.16em;padding:.55rem .7rem;border-left:1px solid #f1cc68;background:linear-gradient(90deg,#0b0b0bb3,#0b0b0b18);text-shadow:0 0 12px #f5cc678c;transform-origin:right center;animation:none!important}
+
+
+/* Ajuste solicitado: os avatares dos cards de Responsáveis devem permanecer centralizados. */
+#responsaveis .ceo-card {
+  align-items: center;
+}
+
+#responsaveis .ceo-photo-wrap,
+#responsaveis .ceo-photo {
+  margin-inline: auto;
+}
+
+#responsaveis .ceo-photo-wrap {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}
